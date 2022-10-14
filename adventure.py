@@ -1,14 +1,15 @@
 #Defining the main function
 def main():
     count = 0.0
+    name = input("Please enter your name:")
     def intro():
-        welcome = f"Welcome to No Man's Land!\nThis evening, you will voyage through the backcountry on bike as you make your way home from Big Brook Park. But be careful! You must return before darkness falls, or else the diving bats will emerge and bombard you as you bike along the trail!"
+        welcome = f"Welcome to No Man's Land, {name}!\nThis evening, you will voyage through the backcountry on bike as you make your way home from Big Brook Park. But be careful! You must return before darkness falls, or else the diving bats will emerge and bombard you as you bike along the trail!"
         print(welcome)
     intro()
     detail1 = f"As you begin to leave the park, it's hard not to reflect upon the beauty of the lush meadows and colorful flowers surrounding you."
     def location1():
         enter = input("Press Enter to continue")
-        bigbrook = f"It's been a long day of fun at Big Brook Park, with a delicious late afternoon picnic to top it off, but now it's time to make the 7 mile bike ride home. The only issue is that you will need energy to complete the voyage! For this reason, you must stop off at the local coffee shop before they close for the night, and then you may continue with your journey."
+        bigbrook = f"It's been a long day, {name}. You've had fun at Big Brook Park, with a delicious late afternoon picnic to top it off, but now it's time to make the 7 mile bike ride home. The only issue is that you will need energy to complete the voyage! For this reason, you must stop off at the local coffee shop before they close for the night, and then you may continue with your journey."
         print(enter)
         print(bigbrook)
         enter1 = input("Press Enter to continue")
@@ -27,10 +28,10 @@ def main():
         print(detail2)
     location2()
     count = count + 1
-    detail3 = f"This part of the trek is a little scary, as you can literally feel the cars rushing on by right next to you!"
+    detail3 = f"Beware, {name}: this part of the trek is a little scary, as you can literally feel the cars rushing on by right next to you!"
     def location3():
         enter = input("Press Enter to continue")
-        route = f"To get to the start of the bike trail, you have no choice but to bike along a busy stretch of Route 79. Be careful! It's almost dusk, so visibility is decreasing. There's no sidewalk, as you'll be biking past nothing but farms, so make sure to stay within the shoulder of the road!"
+        route = f"To get to the start of the bike trail, you have no choice but to bike along a busy stretch of Route 79. Be careful {name}! It's almost dusk, so visibility is decreasing. There's no sidewalk, as you'll be biking past nothing but farms, so make sure to stay within the shoulder of the road!"
         print(enter)
         print(route)
         enter1 = input("Press Enter to continue")
@@ -41,7 +42,7 @@ def main():
     detail4 = f"The shop is closed, but fortunately you find an air pump laying in the parking lot."
     def location4():
         enter = input("Press Enter to continue")
-        bikehub = f"At long last, you've arrived at the trailhead! It's time to complete the bulk of your journey! But wait! One of the tires on your bike feels a little light on air. Luckily, The Bicycle Hub bike shop is located right next to the trailhead! Time to fill up some air in that tire and continue on your journey."
+        bikehub = f"At long last, you've arrived at the trailhead! Congrats {name}! It's time to complete the bulk of your journey! But wait! One of the tires on your bike feels a little light on air. Luckily, The Bicycle Hub bike shop is located right next to the trailhead! Time to fill up some air in that tire and continue on your journey."
         print(enter)
         print(bikehub)
         enter1 = input("Press Enter to continue")
@@ -85,7 +86,7 @@ def main():
     detail8 = f"While walking your bike, your white shoes become completely soiled in the muck, but it's better than trying to ride the bike through the muck and risking injury."
     def location8():
         enter = input("Press Enter to continue")
-        bog = f"After bumping your way along the rugged dirt bike trails, you finally reemerge onto the glorious pavement. But the tricky terrain doesn't end there – mud from the polluted Burnt Fly Bog superfund site has leeched onto a low-lying portion of the bike trail after a recent storm, causing treacherous and slippery conditions. For this portion of the trail, you must walk your bike as a precaution against the dangerous conditions."
+        bog = f"After bumping your way along the rugged dirt bike trails, you finally reemerge onto the glorious pavement. Nice job {name}! But the tricky terrain doesn't end there – mud from the polluted Burnt Fly Bog superfund site has leeched onto a low-lying portion of the bike trail after a recent storm, causing treacherous and slippery conditions. For this portion of the trail, you must walk your bike as a precaution against the dangerous conditions."
         print(enter)
         print(bog)
         enter1 = input("Press Enter to continue")
@@ -117,7 +118,7 @@ def main():
     count = count + 1
     def ending():
         enter = input("Press Enter to continue")
-        congrats = f"Congrats! After a long journey of {count} stops, it's finally time to exit the bike trail and cruise on home through your neighborhood! You're definitely gonna sleep well tonight!"
+        congrats = f"Congrats {name}! After a long journey of {count} stops, it's finally time to exit the bike trail and cruise on home through your neighborhood! You're definitely gonna sleep well tonight!"
         print(enter)
         print(congrats)
     ending()
