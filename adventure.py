@@ -16,6 +16,9 @@ def main():
         while count == 0:
             if str.lower(list1[0]) == "north":
                 print(bigbrook)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail1)
                 break
             elif str.lower(list1[0]) == "south":
                 print("There are no locations to the south! You must head north on the trail!")
@@ -24,13 +27,11 @@ def main():
                 print("The list of valid commands is: North, South, East, West, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
             elif str.lower(list1[0]) == "quit":
+                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
                 break
             else:
                 print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
-        enter1 = input("Press Enter to continue")
-        print(enter1)
-        print(detail1)
     location1()
     count = count + 1
     list1[0] = input("Enter a valid command:")
@@ -40,21 +41,25 @@ def main():
         while count == 1.0:
             if str.lower(list1[0]) == "north":
                 print(coffee)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail2)
                 break
             elif str.lower(list1[0]) == "south":
                 print(bigbrook)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail1)
                 break
             elif str.lower(list1[0]) == "help":
                 print("The list of valid commands is: North, South, East, West, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
             elif str.lower(list1[0]) == "quit":
+                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
                 break
             else:
                 print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
-        enter1 = input("Press Enter to continue")
-        print(enter1)
-        print(detail2)
     location2()
     count = count + 1
     list1[0] = input("Enter a valid command:")
@@ -64,21 +69,25 @@ def main():
         while count == 2.0:
             if str.lower(list1[0]) == "north":
                 print(route)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail3)
                 break
             elif str.lower(list1[0]) == "south":
                 print(coffee)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail2)
                 break
             elif str.lower(list1[0]) == "help":
                 print("The list of valid commands is: North, South, East, West, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
             elif str.lower(list1[0]) == "quit":
+                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
                 break
             else:
                 print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
-        enter1 = input("Press Enter to continue")
-        print(enter1)
-        print(detail3)
     location3()
     count = count + 1
     list1[0] = input("Enter a valid command:")
@@ -88,21 +97,25 @@ def main():
         while count == 3.0:
             if str.lower(list1[0]) == "north":
                 print(bikehub)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail4)
                 break
             elif str.lower(list1[0]) == "south":
                 print(route)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail3)
                 break
             elif str.lower(list1[0]) == "help":
                 print("The list of valid commands is: North, South, East, West, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
             elif str.lower(list1[0]) == "quit":
+                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
                 break
             else:
                 print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
-        enter1 = input("Press Enter to continue")
-        print(enter1)
-        print(detail4)
     location4()
     count = count + 1
     list1[0] = input("Enter a valid command:")
@@ -112,21 +125,26 @@ def main():
         while count == 4.0:
             if str.lower(list1[0]) == "north":
                 print(airport)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail5)
                 break
             elif str.lower(list1[0]) == "south":
                 print(bikehub)
+                print(bikehub)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail4)
                 break
             elif str.lower(list1[0]) == "help":
                 print("The list of valid commands is: North, South, East, West, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
             elif str.lower(list1[0]) == "quit":
+                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
                 break
             else:
                 print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
-        enter1 = input("Press Enter to continue")
-        print(enter1)
-        print(detail5)
     location5()
     count = count + 1
     list1[0] = input("Enter a valid command:")
@@ -136,21 +154,25 @@ def main():
         while count == 5.0:
             if str.lower(list1[0]) == "north":
                 print(cemetary)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail6)
                 break
             elif str.lower(list1[0]) == "south":
                 print(airport)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail5)
                 break
             elif str.lower(list1[0]) == "help":
                 print("The list of valid commands is: North, South, East, West, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
             elif str.lower(list1[0]) == "quit":
+                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
                 break
             else:
                 print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
-        enter1 = input("Press Enter to continue")
-        print(enter1)
-        print(detail6)
     location6()
     count = count + 1
     list1[0] = input("Enter a valid command:")
@@ -160,21 +182,25 @@ def main():
         while count == 6.0:
             if str.lower(list1[0]) == "north":
                 print(dirt)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail7)
                 break
             elif str.lower(list1[0]) == "south":
                 print(cemetary)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail6)
                 break
             elif str.lower(list1[0]) == "help":
                 print("The list of valid commands is: North, South, East, West, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
             elif str.lower(list1[0]) == "quit":
+                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
                 break
             else:
                 print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
-        enter1 = input("Press Enter to continue")
-        print(enter1)
-        print(detail7)
     location7()
     count = count + 1
     list1[0] = input("Enter a valid command:")
@@ -184,21 +210,25 @@ def main():
         while count == 7.0:
             if str.lower(list1[0]) == "north":
                 print(bog)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail8)
                 break
             elif str.lower(list1[0]) == "south":
                 print(dirt)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail7)
                 break
             elif str.lower(list1[0]) == "help":
                 print("The list of valid commands is: North, South, East, West, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
             elif str.lower(list1[0]) == "quit":
+                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
                 break
             else:
                 print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
-        enter1 = input("Press Enter to continue")
-        print(enter1)
-        print(detail8)
     location8()
     count = count + 1  
     list1[0] = input("Enter a valid command:")  
@@ -208,21 +238,25 @@ def main():
         while count == 8.0:
             if str.lower(list1[0]) == "north":
                 print(substation)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail9)
                 break
             elif str.lower(list1[0]) == "south":
                 print(bog)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail8)
                 break
             elif str.lower(list1[0]) == "help":
                 print("The list of valid commands is: North, South, East, West, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
             elif str.lower(list1[0]) == "quit":
+                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
                 break
             else:
                 print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
-        enter1 = input("Press Enter to continue")
-        print(enter1)
-        print(detail9)
     location9()
     count = count + 1
     list1[0] = input("Enter a valid command:")
@@ -232,21 +266,25 @@ def main():
         while count == 9.0:
             if str.lower(list1[0]) == "north":
                 print(shack)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail10)
                 break
             elif str.lower(list1[0]) == "south":
                 print(substation)
+                enter1 = input("Press Enter to continue")
+                print(enter1)
+                print(detail9)
                 break
             elif str.lower(list1[0]) == "help":
                 print("The list of valid commands is: North, South, East, West, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
             elif str.lower(list1[0]) == "quit":
+                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
                 break
             else:
                 print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
                 list1[0] = str.lower(input("Enter a valid command:"))
-        enter1 = input("Press Enter to continue")
-        print(enter1)
-        print(detail10)
     location10()
     count = count + 1
     def ending():
