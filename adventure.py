@@ -16,7 +16,7 @@ def main():
         while count == 0:
             if str.lower(list1[0]) == "north":
                 print(bigbrook)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail1)
                 break
@@ -41,13 +41,13 @@ def main():
         while count == 1.0:
             if str.lower(list1[0]) == "north":
                 print(coffee)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail2)
                 break
             elif str.lower(list1[0]) == "south":
                 print(bigbrook)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail1)
                 break
@@ -69,13 +69,13 @@ def main():
         while count == 2.0:
             if str.lower(list1[0]) == "north":
                 print(route)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail3)
                 break
             elif str.lower(list1[0]) == "south":
                 print(coffee)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail2)
                 break
@@ -97,13 +97,13 @@ def main():
         while count == 3.0:
             if str.lower(list1[0]) == "north":
                 print(bikehub)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail4)
                 break
             elif str.lower(list1[0]) == "south":
                 print(route)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail3)
                 break
@@ -125,14 +125,14 @@ def main():
         while count == 4.0:
             if str.lower(list1[0]) == "north":
                 print(airport)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail5)
                 break
             elif str.lower(list1[0]) == "south":
                 print(bikehub)
                 print(bikehub)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail4)
                 break
@@ -154,13 +154,13 @@ def main():
         while count == 5.0:
             if str.lower(list1[0]) == "north":
                 print(cemetary)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail6)
                 break
             elif str.lower(list1[0]) == "south":
                 print(airport)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail5)
                 break
@@ -182,13 +182,13 @@ def main():
         while count == 6.0:
             if str.lower(list1[0]) == "north":
                 print(dirt)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail7)
                 break
             elif str.lower(list1[0]) == "south":
                 print(cemetary)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail6)
                 break
@@ -210,13 +210,13 @@ def main():
         while count == 7.0:
             if str.lower(list1[0]) == "north":
                 print(bog)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail8)
                 break
             elif str.lower(list1[0]) == "south":
                 print(dirt)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail7)
                 break
@@ -238,13 +238,13 @@ def main():
         while count == 8.0:
             if str.lower(list1[0]) == "north":
                 print(substation)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail9)
                 break
             elif str.lower(list1[0]) == "south":
                 print(bog)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail8)
                 break
@@ -266,13 +266,13 @@ def main():
         while count == 9.0:
             if str.lower(list1[0]) == "north":
                 print(shack)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail10)
                 break
             elif str.lower(list1[0]) == "south":
                 print(substation)
-                enter1 = input("Press Enter to continue")
+                enter1 = input("Press Enter to Examine Location")
                 print(enter1)
                 print(detail9)
                 break
