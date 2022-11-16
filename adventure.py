@@ -25,368 +25,383 @@ def main():
     {"location": "The Bog", "summary": f"After bumping your way along the rugged dirt bike trails, you finally reemerge onto the glorious pavement. Nice job {name}! But the tricky terrain doesn't end there – mud from the polluted Burnt Fly Bog superfund site has leeched onto a low-lying portion of the bike trail after a recent storm, causing treacherous and slippery conditions. For this portion of the trail, you must walk your bike as a precaution against the dangerous conditions.", "details": "While walking your bike, your white shoes become completely soiled in the muck, but it's better than trying to ride the bike through the muck and risking injury.", "was_visited": False},
     {"location": "Substation", "summary": "As you move past the bog and mount back onto your bicycle, you begin to hear the hum of the Freneau electrical substation off in the near distance. You know this means you're in the homestretch! Keep biking as fast as you can – the bats are beginning to emerge!", "details": "The electrical substation is surrounded by a 10-foot high barbed wire fence and high voltage signs, which only add to the eery feel of the bike trail at dusk.", "was_visited": False},
     {"location": "Shack", "summary": "As you near the end of the bike trail, there's one last landmark to pass! On your righthand side, you see it coming closer and closer: The creepy abandoned shack! As the purple graffiti of the shack gets closer and closer, a strange man emerges and runs towards the trail! Luckily you're able to slip past him just in time and make your way home!", "details": "The man is old with white hair, but you end up biking past him so fast that you're not able to get a good look at him or his face.", "was_visited": False}]
-    def first_location():
-        while count == 0:
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            if str.lower(list1[0]) == "north":
-                location = locationsList[0]["summary"]
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(locationsList[0]["details"])
-                locationsList[0]["was_visited"] = True
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "south":
-                print("There are no locations to the south! You must head north on the trail!")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "help":
-                print("The list of valid commands is: North, South, East, West, Help, and Quit")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "quit":
-                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
-                break
-            else:
-                print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
-                #giving the user a chance to re-enter a valid command
-                list1[0] = str.lower(input("Enter a valid command:"))
-    first_location()
+    while locationsList[0]["was_visited"] == False:
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        if str.lower(list1[0]) == "north":
+            current_location = locationsList[0]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[0]["details"])
+            locationsList[0]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "south":
+            print("There are no locations to the south and you have not yet arrived at the first location, so you must must head north on the trail!")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "help":
+            print("The list of valid commands is: North, South, Help, and Quit")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "quit":
+            print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
+            break
+        else:
+            print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
+            #giving the user a chance to re-enter a valid command
+            list1[0] = str.lower(input("Enter a valid command:"))
     #increase location count by 1 after the first stop
     count = count + 1
     #replacing command in the list with a new command to be interpreted by the next while-loop
     list1[0] = input("Enter a valid command:")
-    def second_location():
-        while count == 1.0:
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            if str.lower(list1[0]) == "north":
-                location = coffee
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail2)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "south":
-                location = bigbrook
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail1)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "help":
-                print("The list of valid commands is: North, South, East, West, Help, and Quit")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "quit":
-                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
-                break
-            else:
-                print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
-                #giving the user a chance to re-enter a valid command
-                list1[0] = str.lower(input("Enter a valid command:"))
-    second_location()
+    while locationsList[0]["was_visited"] == True:
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        if str.lower(list1[0]) == "north":
+            current_location = locationsList[1]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[1]["details"])
+            locationsList[0]["was_visited"] = False
+            locationsList[1]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "south":
+            print("There are no locations to the south, so you will have to stay here!")
+            current_location = locationsList[0]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[0]["details"])
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "help":
+            print("The list of valid commands is: North, South, Help, and Quit")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "quit":
+            print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
+            break
+        else:
+            print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
+            #giving the user a chance to re-enter a valid command
+            list1[0] = str.lower(input("Enter a valid command:"))
     #increase location count by 1 after the next stop
     count = count + 1
     #replacing command in the list with a new command to be interpreted by the next while-loop
     list1[0] = input("Enter a valid command:")
-    def third_location():
-        while count == 2.0:
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            if str.lower(list1[0]) == "north":
-                location = route
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail3)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "south":
-                location = coffee
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail2)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "help":
-                print("The list of valid commands is: North, South, East, West, Help, and Quit")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "quit":
-                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
-                break
-            else:
-                print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
-                #giving the user a chance to re-enter a valid command
-                list1[0] = str.lower(input("Enter a valid command:"))
-    third_location()
+    while locationsList[1]["was_visited"] == True:
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        if str.lower(list1[0]) == "north":
+            current_location = locationsList[2]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[2]["details"])
+            locationsList[1]["was_visited"] = False
+            locationsList[2]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "south":
+            current_location = locationsList[0]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[0]["details"])
+            locationsList[1]["was_visited"] = False
+            locationsList[0]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "help":
+            print("The list of valid commands is: North, South, Help, and Quit")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "quit":
+            print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
+            break
+        else:
+            print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
+            #giving the user a chance to re-enter a valid command
+            list1[0] = str.lower(input("Enter a valid command:"))
     #increase location count by 1 after the next stop
     count = count + 1
     #replacing command in the list with a new command to be interpreted by the next while-loop
     list1[0] = input("Enter a valid command:")
-    def fourth_location():
-        while count == 3.0:
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            if str.lower(list1[0]) == "north":
-                location = bikehub
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail4)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "south":
-                location = route
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail3)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "help":
-                print("The list of valid commands is: North, South, East, West, Help, and Quit")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "quit":
-                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
-                break
-            else:
-                print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
-                #giving the user a chance to re-enter a valid command
-                list1[0] = str.lower(input("Enter a valid command:"))
-    fourth_location()
+    while locationsList[2]["was_visited"] == True:
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        if str.lower(list1[0]) == "north":
+            current_location = locationsList[3]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[3]["details"])
+            locationsList[2]["was_visited"] = False
+            locationsList[3]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "south":
+            current_location = locationsList[1]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[1]["details"])
+            locationsList[2]["was_visited"] = False
+            locationsList[1]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "help":
+            print("The list of valid commands is: North, South, Help, and Quit")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "quit":
+            print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
+            break
+        else:
+            print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
+            #giving the user a chance to re-enter a valid command
+            list1[0] = str.lower(input("Enter a valid command:"))
     #increase location count by 1 after the next stop
     count = count + 1
     #replacing command in the list with a new command to be interpreted by the next while-loop
     list1[0] = input("Enter a valid command:")
-    def fifth_location():
-        while count == 4.0:
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            if str.lower(list1[0]) == "north":
-                location = airport
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail5)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "south":
-                location = bikehub
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail4)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "help":
-                print("The list of valid commands is: North, South, East, West, Help, and Quit")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "quit":
-                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
-                break
-            else:
-                print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
-                #giving the user a chance to re-enter a valid command
-                list1[0] = str.lower(input("Enter a valid command:"))
-    fifth_location()
+    while locationsList[3]["was_visited"] == True:
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        if str.lower(list1[0]) == "north":
+            current_location = locationsList[4]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[4]["details"])
+            locationsList[3]["was_visited"] = False
+            locationsList[4]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "south":
+            current_location = locationsList[2]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[2]["details"])
+            locationsList[3]["was_visited"] = False
+            locationsList[2]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "help":
+            print("The list of valid commands is: North, South, Help, and Quit")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "quit":
+            print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
+            break
+        else:
+            print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
+            #giving the user a chance to re-enter a valid command
+            list1[0] = str.lower(input("Enter a valid command:"))
     #increase location count by 1 after the next stop
     count = count + 1
     #replacing command in the list with a new command to be interpreted by the next while-loop
     list1[0] = input("Enter a valid command:")
-    def sixth_location():
-        while count == 5.0:
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            if str.lower(list1[0]) == "north":
-                location = cemetary
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail6)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "south":
-                location = airport
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail5)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "help":
-                print("The list of valid commands is: North, South, East, West, Help, and Quit")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "quit":
-                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
-                break
-            else:
-                print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
-                #giving the user a chance to re-enter a valid command
-                list1[0] = str.lower(input("Enter a valid command:"))
-    sixth_location()
+    while locationsList[4]["was_visited"] == True:
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        if str.lower(list1[0]) == "north":
+            current_location = locationsList[5]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[5]["details"])
+            locationsList[4]["was_visited"] = False
+            locationsList[5]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "south":
+            current_location = locationsList[3]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[3]["details"])
+            locationsList[4]["was_visited"] = False
+            locationsList[3]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "help":
+            print("The list of valid commands is: North, South, Help, and Quit")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "quit":
+            print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
+            break
+        else:
+            print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
+            #giving the user a chance to re-enter a valid command
+            list1[0] = str.lower(input("Enter a valid command:"))
     #increase location count by 1 after the next stop
     count = count + 1
     #replacing command in the list with a new command to be interpreted by the next while-loop
     list1[0] = input("Enter a valid command:")
-    def seventh_location():
-        while count == 6.0:
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            if str.lower(list1[0]) == "north":
-                location = dirt
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail7)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "south":
-                location = cemetary
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail6)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "help":
-                print("The list of valid commands is: North, South, East, West, Help, and Quit")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "quit":
-                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
-                break
-            else:
-                print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
-                #giving the user a chance to re-enter a valid command
-                list1[0] = str.lower(input("Enter a valid command:"))
-    seventh_location()
+    while locationsList[5]["was_visited"] == True:
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        if str.lower(list1[0]) == "north":
+            current_location = locationsList[6]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[6]["details"])
+            locationsList[5]["was_visited"] = False
+            locationsList[6]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "south":
+            current_location = locationsList[4]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[4]["details"])
+            locationsList[5]["was_visited"] = False
+            locationsList[4]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "help":
+            print("The list of valid commands is: North, South, Help, and Quit")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "quit":
+            print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
+            break
+        else:
+            print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
+            #giving the user a chance to re-enter a valid command
+            list1[0] = str.lower(input("Enter a valid command:"))
     #increase location count by 1 after the next stop
     count = count + 1
     #replacing command in the list with a new command to be interpreted by the next while-loop
     list1[0] = input("Enter a valid command:")
-    def eighth_location():
-        while count == 7.0:
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            if str.lower(list1[0]) == "north":
-                location = bog
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail8)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "south":
-                location = dirt
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail7)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "help":
-                print("The list of valid commands is: North, South, East, West, Help, and Quit")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "quit":
-                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
-                break
-            else:
-                print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
-                #giving the user a chance to re-enter a valid command
-                list1[0] = str.lower(input("Enter a valid command:"))
-    eighth_location()
+    while locationsList[6]["was_visited"] == True:
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        if str.lower(list1[0]) == "north":
+            current_location = locationsList[7]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[7]["details"])
+            locationsList[6]["was_visited"] = False
+            locationsList[7]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "south":
+            current_location = locationsList[5]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[5]["details"])
+            locationsList[6]["was_visited"] = False
+            locationsList[5]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "help":
+            print("The list of valid commands is: North, South, Help, and Quit")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "quit":
+            print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
+            break
+        else:
+            print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
+            #giving the user a chance to re-enter a valid command
+            list1[0] = str.lower(input("Enter a valid command:"))
     #increase location count by 1 after the next stop
     count = count + 1 
     #replacing command in the list with a new command to be interpreted by the next while-loop 
     list1[0] = input("Enter a valid command:")  
-    def ninth_location():
-        while count == 8.0:
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            if str.lower(list1[0]) == "north":
-                location = substation
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail9)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "south":
-                location = bog
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail8)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "help":
-                print("The list of valid commands is: North, South, East, West, Help, and Quit")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "quit":
-                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
-                break
-            else:
-                print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
-                #giving the user a chance to re-enter a valid command
-                list1[0] = str.lower(input("Enter a valid command:"))
-    ninth_location()
+    while locationsList[7]["was_visited"] == True:
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        if str.lower(list1[0]) == "north":
+            current_location = locationsList[8]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[8]["details"])
+            locationsList[7]["was_visited"] = False
+            locationsList[8]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "south":
+            current_location = locationsList[6]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[6]["details"])
+            locationsList[7]["was_visited"] = False
+            locationsList[6]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "help":
+            print("The list of valid commands is: North, South, Help, and Quit")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "quit":
+            print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
+            break
+        else:
+            print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
+            #giving the user a chance to re-enter a valid command
+            list1[0] = str.lower(input("Enter a valid command:"))
     #increase location count by 1 after the next stop
     count = count + 1
     #replacing command in the list with a new command to be interpreted by the next while-loop
     list1[0] = input("Enter a valid command:")
-    def tenth_location():
-        while count == 9.0:
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            if str.lower(list1[0]) == "north":
-                location = shack
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail10)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "south":
-                location = substation
-                print(location)
-                #Revealing deatils by prompting the user to examine the location (as per commit 5)
-                enter1 = input("Press Enter to Examine Location")
-                print(enter1)
-                print(detail9)
-                break
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "help":
-                print("The list of valid commands is: North, South, East, West, Help, and Quit")
-                list1[0] = str.lower(input("Enter a valid command:"))
-            #making sure the command is interpreted as a string and eliminating case-sensitive
-            elif str.lower(list1[0]) == "quit":
-                print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
-                break
-            else:
-                print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
-                #giving the user a chance to re-enter a valid command
-                list1[0] = str.lower(input("Enter a valid command:"))
-    tenth_location()
+    while locationsList[8]["was_visited"] == True:
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        if str.lower(list1[0]) == "north":
+            current_location = locationsList[9]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[9]["details"])
+            locationsList[8]["was_visited"] = False
+            locationsList[9]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "south":
+            current_location = locationsList[7]["summary"]
+            print(current_location)
+            #Revealing deatils by prompting the user to examine the location (as per commit 5)
+            enter1 = input("Press Enter to Examine Location")
+            print(enter1)
+            print(locationsList[7]["details"])
+            locationsList[8]["was_visited"] = False
+            locationsList[7]["was_visited"] = True
+            break
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "help":
+            print("The list of valid commands is: North, South, Help, and Quit")
+            list1[0] = str.lower(input("Enter a valid command:"))
+        #making sure the command is interpreted as a string and eliminating case-sensitive
+        elif str.lower(list1[0]) == "quit":
+            print(f"You've chosen quit the game, {name}! Copyright Luke Sassa, 2022")
+            break
+        else:
+            print("You've entered an invalid command! The list of valid commands is: North, South, Help, and Quit")
+            #giving the user a chance to re-enter a valid command
+            list1[0] = str.lower(input("Enter a valid command:"))
     #increase location count by 1 after the next stop
     count = count + 1
     def ending():
